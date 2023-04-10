@@ -1,0 +1,14 @@
+.parent {
+    padding: 0px;
+    margin-top: 1.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.childBar {
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(15, 50, 132)
+}
