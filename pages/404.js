@@ -10,9 +10,10 @@ const FOF = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div>
+            <div style={{"text-align":"center","paddingTop":"25%"}}>
                 {" "}
                 <h1>404 Error | Page Not Found</h1>
+                <br/>
                 <span>
                     Back to the Dashboard: <Link href="/">Here</Link>
                 </span>

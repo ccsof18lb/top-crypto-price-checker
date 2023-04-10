@@ -19,3 +19,13 @@
 .coinImg {
     width: 3.5rem;
 }
+
+.coinPrice {
+    padding-right: 0px;
+}
+
+@media (min-width: 440px) {
+    .coinPrice {
+        padding-right: 10px;
+    }
+}
