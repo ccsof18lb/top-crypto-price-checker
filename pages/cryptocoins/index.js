@@ -2,8 +2,15 @@ import Axios from "axios";
 import Head from 'next/head'
 import styles from "@/styles/Cryptocoins.module.css"
 
+function styleCoinCard (index) {
+    if (index % 2 == 0) {
+        return 'red'
+    } else {
+        return 'purple'
+    }
+}
+
 const CryptoArr = ({ coinData }) => {
-    console.log(coinData)
     return (
         <>
             <Head>
@@ -13,9 +20,9 @@ const CryptoArr = ({ coinData }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.parent}>
-                {coinData.coins.map((crypto)=>{
+                {coinData.coins.map((crypto,index)=>{
                     return (
-                        <div className={styles.coinData} key={crypto.id}>
+                        <div className={styles.coinData} key={crypto.id} style={{backgroundColor:styleCoinCard(index)}}>
                             <h1>{crypto.name}</h1>
                             <div className={styles.coinDetail}>
                                 <img className={styles.coinImg} src={crypto.icon}/>

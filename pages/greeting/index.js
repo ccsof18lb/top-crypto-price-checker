@@ -9,7 +9,7 @@ const GreetMain = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div style={{"text-align":"center","paddingTop":"25%"}}>
+            <div style={{textAlign:"center",paddingTop:"25%"}}>
                 <h1>Yo whatsup</h1>
             </div>
         </>
