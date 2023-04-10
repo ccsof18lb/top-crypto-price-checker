@@ -52,6 +52,7 @@ const CryptoArr = ({ coinData }) => {
                                     style={{color:"rgb(68,197,106)"}}
                                     href={crypto.websiteUrl} target="_blank"
                                 >Click here {crypto.symbol} website to know more</a>
+                                <p>{crypto.contractAddress}</p>
                             </div>
                         </div>
                     )
