@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <div className={styles.parent}>
             <div className={styles.childBar}>
-                <Link href="/">Dashboard</Link>
+                <Link href="/">Home</Link>
                 <Link href="/cryptocoins">Coins</Link>
             </div>
         </div>

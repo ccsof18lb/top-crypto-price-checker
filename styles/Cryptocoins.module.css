@@ -11,6 +11,7 @@
 
 .coinDetail {
     padding-top:1.5%;
+    padding-bottom:1.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;

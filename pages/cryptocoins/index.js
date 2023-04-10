@@ -10,7 +10,16 @@ function coinCardColor (index) {
     }
 }
 
+function strongColor(index) {
+    if (index % 2 != 0) {
+        return "rgb(231,250,62)"
+    } else {
+        return "rgb(40,225,235)"
+    }
+}
+
 const CryptoArr = ({ coinData }) => {
+    console.log(coinData)
     return (
         <>
             <Head>
@@ -26,10 +35,23 @@ const CryptoArr = ({ coinData }) => {
                             backgroundColor:coinCardColor(index),marginBottom:"15px",
                             padding:"10px"
                             }}>
-                            <h1>{crypto.name}</h1>
+                            <h1>{crypto.name}/{crypto.symbol}</h1>
                             <div className={styles.coinDetail}>
                                 <img className={styles.coinImg} src={crypto.icon}/>
-                                <p className={styles.coinPrice}>current: {crypto.price}</p>
+                                <p className={styles.coinPrice}><strong style={{color:strongColor(index)}}>Current Price:</strong> {crypto.price}</p>
+                            </div>
+                            <hr/>
+                            <br/>
+                            <div>
+                                <p><strong style={{color:strongColor(index)}}>Available Supply:</strong> {crypto.availableSupply}</p>
+                                <p><strong style={{color:strongColor(index)}}>Total Supply:</strong> {crypto.totalSupply}</p>
+                                <p><strong style={{color:strongColor(index)}}>Volume:</strong> {crypto.volume}</p>
+                                <p><strong style={{color:strongColor(index)}}>Price Per BTC:</strong> {crypto.priceBtc}</p>
+                                <p><strong style={{color:strongColor(index)}}>Market Cap:</strong> {crypto.marketCap}</p>
+                                <a 
+                                    style={{color:"rgb(68,197,106)"}}
+                                    href={crypto.websiteUrl} target="_blank"
+                                >Click here {crypto.symbol} website to know more</a>
                             </div>
                         </div>
                     )
